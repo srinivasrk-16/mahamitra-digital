@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="src/w3.css">
+</head>
+<body>
+    <nav class="w3-sidebar w3-light-grey w3-bar-block" style="width: 15%;">
+        <h3 class="w3-bar-item w3-text-grey">Menu</h3>
+        <a class="w3-bar-item w3-button w3-grey" href="index.html">Home</a>
+        <a class="w3-bar-item w3-button" href="contents-1.html">Contents-1</a>
+        <a class="w3-bar-item w3-button" href="contents-2.html">Contents-2</a>
+        <a class="w3-bar-item w3-button" href="contents-3.html">Contents-3</a>
+        <a class="w3-bar-item w3-button" href="info.html">Info</a>
+    </nav>
+
+    <div style="margin-left: 15%;">
+
+    <header class="w3-container w3-pale-red" style="position: sticky; top: 0; z-index: 1;">
+        <h1>Home</h1>
+    </header>
+    
+    <main class="w3-container w3-white" style="margin-right: 10%;">
+
+      <h2 class="w3-center w3-sand">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container" style="width: 54%; z-index: 0;">
+  <img class="mySlides" src="figs/fig-01a.png" style="width:100%">
+  <img class="mySlides" src="figs/fig-01b.png" style="width:100%">
+  <img class="mySlides" src="figs/fig-01c.png" style="width:100%">
+  <img class="mySlides" src="figs/fig-01d.png" style="width:100%">
+
+  <button class="w3-button w3-grey w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-grey w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+ <br>
+
+    </main>
+
+    <footer class="w3-container w3-grey">
+        <h5>Footer</h5>
+        <p>copyright info.</p>
+    </footer>
+
+    </div>
+</body>
+</html>
